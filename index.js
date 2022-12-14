@@ -31,8 +31,8 @@ addEventListener("fetch", async event=>{
         var origin_url = new URL(event.request.url);
 
         function fix(myHeaders) {
-            //            myHeaders.set("Access-Control-Allow-Origin", "*");
-            myHeaders.set("Access-Control-Allow-Origin", event.request.headers.get("Origin"));
+            myHeaders.set("Access-Control-Allow-Origin", "*");
+            // myHeaders.set("Access-Control-Allow-Origin", event.request.headers.get("Origin"));
             if (isOPTIONS) {
                 myHeaders.set("Access-Control-Allow-Methods", event.request.headers.get("access-control-request-method"));
                 acrh = event.request.headers.get("access-control-request-headers");
